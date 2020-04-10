@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A dynamic shopping list</title>
+    <style>
+        li {
+          margin-bottom: 10px;
+        }
+        li button {
+          font-size: 12px;
+          margin-left: 20px;
+        }
+      </style>
+</head>
+<body>
+    <h1>My shopping list</h1>
+    <div>
+        Enter a new item: 
+        <input type="text" name="strng-item" id="item">
+        <input type="button" value="Add item" onclick="addItem()">
+    </div>
+    <div>
+
+    </div>
+    <script>
+        const div = document.querySelectorAll('div')
+        const lista = document.createElement('ul')
+        div[1].appendChild(lista)
+        const addItem = function () {
+            const item = document.querySelector('input')
+            const itemOfList = document.createElement('li')
+            const deleteButton = document.createElement('button')
+            const myItem = document.createElement('span')
+            myItem.textContent = item.value
+            itemOfList.appendChild(myItem)
+            deleteButton.textContent = 'Delete'
+            deleteButton.onclick = function (itemD) {
+                itemOfList.remove()
+            }
+            item.value = ''
+            item.focus()
+
+            lista.appendChild(itemOfList)
+            itemOfList.appendChild(deleteButton)            
+        }
+        
+    </script>
+</body>
+</html>

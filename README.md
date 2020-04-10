@@ -1,3 +1,3 @@
-# Tutorial of MDM
+# MDM Tutorials
 
-[Getting started with the Web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)
+[Tutorials](https://developer.mozilla.org/en-US/docs/Web/Tutorials)
